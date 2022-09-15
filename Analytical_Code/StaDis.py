@@ -224,50 +224,62 @@ def fill_Tmatrix(R,B):
     return T
 
 #-----------------------------
+#-------OBTAIN ABUNDANCES-----
+#-----------------------------
+#Calculates and saves abundances for given params
+#Param: R Reward parameter
+#Param: B Intensity of selection coefficient
+#Return: File with abundances
+def abundances(R,B):
+    #Define transition matrix
+    T = fill_Tmatrix(R,B)
+    print("Transition matrix")
+    print(T)
+    print(np.shape(T))
+
+    #Obtain u vector
+    u = np.dot(e,np.linalg.inv(I+U-T))
+
+    print("u vector")
+    print(u)
+    print(np.shape(u))
+
+    #To obtain abundance of each claim:
+    #   For the 1st claim, sum the first n values
+    #   for the 2nd claim, sum the second n values, and so on...
+
+    #Obtain and save abundance of each claim
+    stDis = np.array([])
+    cc = 0
+    Sum = 0
+    for i in range(D):
+        Sum+=u[0,i]
+        cc+=1
+        if cc == 99:
+            stDis = np.append(stDis,Sum)
+            text_file = open("Data/Results_"+str(B)+"_"+str(R)+".txt", "a+")
+            n = text_file.write(str(Sum)+"\n")
+            text_file.close()
+            cc = 0
+            Sum = 0
+
+    print("stDis vector")
+    print(stDis)
+    print(np.shape(stDis))
+
+#-----------------------------
 #-------DEFINE PARAMETERS-----
 #-----------------------------
 #-----**only modify here**----
 
-R = 12
-B = 1.0
+R = [2,5,10,15,20,25,30,35,40]
+B = [0.02,0.04,0.06,0.08,0.2,0.4,0.6,0.8]
+#B = [0.01,0.05,0.1,0.5]
 
+#20,40,60,80,100
 
-#-----------------------------
-#-------OBTAIN ABUNDANCES-----
-#-----------------------------
-
-#Define transition matrix
-T = fill_Tmatrix(R,B)
-print("Transition matrix")
-print(T)
-print(np.shape(T))
-
-#Obtain u vector
-u = np.dot(e,np.linalg.inv(I+U-T))
-
-print("u vector")
-print(u)
-print(np.shape(u))
-
-#To obtain abundance of each claim:
-#   For the 1st claim, sum the first n values
-#   for the 2nd claim, sum the second n values, and so on...
-
-#Obtain and save abundance of each claim
-stDis = np.array([])
-cc = 0
-Sum = 0
-for i in range(D):
-    Sum+=u[0,i]
-    cc+=1
-    if cc == 99:
-        stDis = np.append(stDis,Sum)
-        text_file = open("Data/Results_"+str(B)+"_"+str(R)+".txt", "a+")
-        n = text_file.write(str(Sum)+"\n")
-        text_file.close()
-        cc = 0
-        Sum = 0
-
-print("stDis vector")
-print(stDis)
-print(np.shape(stDis))
+for i in R:
+    for j in B:
+        abundances(i,j)
+        print("Marcador")
+        print(i,j)

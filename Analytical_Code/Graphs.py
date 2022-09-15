@@ -50,8 +50,8 @@ plt.clf()
 #-----------------------------------
 
 #Reward graphs
-#R = np.array([10,20,30,40,50])
-R = np.array([2,4,6,8,10])
+R = np.array([10,20,30,40,50])
+#R = np.array([2,4,6,8,10])
 #Abundance of each state
 values2 = np.empty((np.size(R),n))
 
@@ -77,4 +77,54 @@ plt.legend(title = "R", loc="best")
 plt.xlabel("Claim")
 plt.ylabel("Abundance of each claim")
 plt.savefig("Graphs/Plot_R2.png")
+plt.clf()
+
+
+#--------------AVERAGE VALUE-----------
+B = [0.01,0.05,0.1,0.5,1.0]
+R = [2,4,6,8,10,20,40,60,80,100]
+
+values_B = np.empty((np.size(B),n))
+values_R = np.empty((np.size(R),n))
+
+Big_Val = np.empty((np.size(B),np.size(R)))
+
+#Obtain information from files
+for i in range(np.size(B)):
+    for j in range(np.size(R)):
+        info = np.genfromtxt("Data/Results_"+str(B[i])+"_"+str(R[j])+".txt")
+        ans1 = info*Claims
+        ans2 = round(np.sum(ans1))
+        Big_Val[i,j] = ans2
+
+plt.xscale("log")
+plt.xlabel("Selection intensity coefficient ("+r"$\beta$"+")")
+plt.ylabel("Reward parameter (R)")
+plt.contourf(B,R,np.transpose(Big_Val),levels =n,cmap="inferno")
+plt.colorbar(ticks=[2,10,20,30,40,50,60,70,80,90], label = "Average claim")
+plt.savefig("Graphs/Contour_Gen.png")
+plt.clf()
+
+B = [0.01,0.05,0.1,0.5,1.0]
+R = [2,4,6,8,10,20,40]
+
+values_B = np.empty((np.size(B),n))
+values_R = np.empty((np.size(R),n))
+
+Big_Val = np.empty((np.size(B),np.size(R)))
+
+#Obtain information from files
+for i in range(np.size(B)):
+    for j in range(np.size(R)):
+        info = np.genfromtxt("Data/Results_"+str(B[i])+"_"+str(R[j])+".txt")
+        ans1 = info*Claims
+        ans2 = round(np.sum(ans1))
+        Big_Val[i,j] = ans2
+
+plt.xscale("log")
+plt.xlabel("Selection intensity coefficient ("+r"$\beta$"+")")
+plt.ylabel("Reward parameter (R)")
+plt.contourf(B,R,np.transpose(Big_Val),levels =n,cmap="inferno")
+plt.colorbar(ticks=[2,10,20,30,40,50,60,70,80,90], label = "Average claim")
+plt.savefig("Graphs/Contour_Gen_Z.png")
 plt.clf()
