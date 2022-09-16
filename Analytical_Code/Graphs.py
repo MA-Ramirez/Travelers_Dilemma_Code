@@ -105,8 +105,8 @@ plt.colorbar(ticks=[2,10,20,30,40,50,60,70,80,90], label = "Average claim")
 plt.savefig("Graphs/Contour_Gen.png")
 plt.clf()
 
-B = [0.01,0.05,0.1,0.5,1.0]
-R = [2,4,6,8,10,20,40]
+B = [0.01,0.02,0.04,0.05,0.06,0.08,0.1,0.2,0.4,0.5,0.6,0.8,1.0]
+R = [2,5,10,15,20,25,30,35,40]
 
 values_B = np.empty((np.size(B),n))
 values_R = np.empty((np.size(R),n))
