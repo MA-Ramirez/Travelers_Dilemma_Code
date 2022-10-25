@@ -1,0 +1,4 @@
+[deps]
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+DynamicalSystems = "61744808-ddfa-5f27-97ff-6e42cc95d634"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
