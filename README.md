@@ -5,7 +5,9 @@ Code for the simulations and numerical solutions accompanying the paper _Diversi
 The code is divided in the 3 different methods used for analysing the Traveler's Dilemma
 1. Replicator Mutator Equation
 
-Julia scripts to numerically solve the equation. Python script to graph the results. (coded by M.A.Ramirez)
+The code to numerically solve the equation, and to graph and analyse the results is available at:
+
+[https://github.com/MA-Ramirez/Replicator_Mutator_Eq](https://github.com/MA-Ramirez/Replicator_Mutator_Eq)
 
 2. Wright-Fisher Model
 
