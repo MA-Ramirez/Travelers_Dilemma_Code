@@ -44,10 +44,10 @@ Sigma = parse(Float64,ARGS[1])
 
 #Param dictionary - vary μ and δ
 params = Dict(  :n => 100,
-                #:μ => collect(1e-2:5e-3:4e-1),
-                #:δ => collect(1:20),
-                :μ => collect(1e-2:5e-3:1.5e-2),
-                :δ => [10,15],
+                :μ => collect(1e-2:5e-3:4e-1),
+                :δ => collect(1:20),
+                #:μ => collect(1e-2:5e-3:1.5e-2),
+                #:δ => [10,15],
                 :σ => Sigma
             )
 
