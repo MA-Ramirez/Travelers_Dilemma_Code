@@ -48,7 +48,7 @@ params = Dict(  :n => 100,
                 :δ => collect(1:20),
                 #:μ => collect(1e-2:5e-3:1.5e-2),
                 #:δ => [10,15],
-                :σ => 0.1
+                :σ => Sigma
             )
 
 #Set dictionary to save data
@@ -72,6 +72,7 @@ adata, _ = paramscan(params, initialize;
 #                                    SAVE DATA                                 #
 ################################################################################
 
+#This is a big file
 CSV.write(datadir(savename("AveragePayoff",save_params,"csv")),adata)
 
 ################################################################################
