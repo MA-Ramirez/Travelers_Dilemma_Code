@@ -71,7 +71,7 @@ adata, _ = paramscan(params, initialize;
 #                                    SAVE DATA                                 #
 ################################################################################
 
-CSV.write(datadir(savename("Average_Payoff",save_params,"csv")),adata)
+CSV.write(datadir(savename("AveragePayoff",save_params,"csv")),adata)
 
 ################################################################################
 #                        FUNCTIONS CALCULATE AVERAGE PAYOFF                    #
@@ -160,4 +160,4 @@ scatter(
     )
 
 #Save plot
-savefig(plotsdir(savename("Average_Payoff",save_params,"png")))
+savefig(plotsdir(savename("AveragePayoff",save_params,"png")))
