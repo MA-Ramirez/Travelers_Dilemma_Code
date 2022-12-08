@@ -11,11 +11,11 @@ The code to numerically solve the equation, and to graph and analyse the results
 
 2. Wright-Fisher Model
 
-Julia sub-project to simulate the Wright-Fisher model. It uses [`Agents.jl`](https://juliadynamics.github.io/Agents.jl/stable/), a Julia framework for agent-based modeling. (coded by M.Smerlak)
+Julia sub-project to simulate the Wright-Fisher model. It uses [`Agents.jl`](https://juliadynamics.github.io/Agents.jl/stable/), a Julia framework for agent-based modeling.
 
 3. Introspection Dynamics
 
-Python scripts to simulate the dynamics, obtain the stationary distribution numerically and graph the results. (coded by M.A.Ramirez)
+Python scripts to simulate the dynamics, obtain the stationary distribution numerically and graph the results. 
 
 ## Reproducing the code
 The project contains code in Python and Julia, each method contains the corresponding files to locally reproduce them: `environment.yml` (Python) - `Manifest.toml` and `Project.toml` (Julia)
