@@ -121,12 +121,14 @@ def exe(ini_I,ini_J,R,B,t):
             #Append step information to the evolution array
             EvoI = np.append(EvoI,player_i)
             ini_I=player_i
+            EvoJ = np.append(EvoJ,ini_J)
         else:
             #Perform the introspection process for the player
             other_player = introspection(ini_J,ini_I,R,B)
             #Append step information to the evolution array
             EvoJ = np.append(EvoJ,other_player)
             ini_J=other_player
+            EvoI = np.append(EvoI,ini_I)
 
     return EvoI, EvoJ
 
@@ -218,7 +220,7 @@ R = 2
 B = 0.1
 #B = np.array([0.01,0.05,0.1,0.5,1.0,5.0,10.0])
 #Timesteps
-t = 5000
+t = 2500
 #t=10
 
 #-------------------------------------------
