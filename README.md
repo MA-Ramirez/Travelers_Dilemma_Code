@@ -1,5 +1,9 @@
 # Travelers Dilemma Code
-Code for the simulations and numerical solutions accompanying the paper _Diversity enables the jump towards cooperation for the Traveler's Dilemma_ by M.A.Ramirez, M.Smerlak, A.Traulsen & J.Jost.
+Code for the simulations and numerical solutions accompanying the paper:
+
+**_Diversity enables the jump towards cooperation for the Traveler's Dilemma_ by M.A.Ramirez, M.Smerlak, A.Traulsen & J.Jost**
+
+See the published paper [here](https://www.nature.com/articles/s41598-023-28600-5)
 
 ## Using the code
 The code is divided in the 3 different methods used for analysing the Traveler's Dilemma
