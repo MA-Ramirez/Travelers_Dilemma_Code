@@ -1,6 +1,8 @@
+![Title](https://user-images.githubusercontent.com/37352289/224664351-06a03699-f80f-4489-a63d-43f658661906.png)
 [![DOI](https://img.shields.io/badge/Paper-link-orange)](https://www.nature.com/articles/s41598-023-28600-5)
 
 # Travelers Dilemma Code
+
 Code for the simulations and numerical solutions accompanying the paper:
 
 **_Diversity enables the jump towards cooperation for the Traveler's Dilemma_ by M.A.Ramirez, M.Smerlak, A.Traulsen & J.Jost**
