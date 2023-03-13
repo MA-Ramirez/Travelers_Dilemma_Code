@@ -1,5 +1,6 @@
 ![Title](https://user-images.githubusercontent.com/37352289/224664351-06a03699-f80f-4489-a63d-43f658661906.png)
-[![DOI](https://img.shields.io/badge/Paper-link-orange)](https://www.nature.com/articles/s41598-023-28600-5)
+[![Paper](https://img.shields.io/badge/Paper-link-orange)](https://www.nature.com/articles/s41598-023-28600-5)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7728024.svg)](https://doi.org/10.5281/zenodo.7728024)
 
 # Travelers Dilemma Code
 
