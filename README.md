@@ -1,3 +1,5 @@
+[![DOI](https://img.shields.io/badge/Paper-link-orange)](https://www.nature.com/articles/s41598-023-28600-5)
+
 # Travelers Dilemma Code
 Code for the simulations and numerical solutions accompanying the paper:
 
